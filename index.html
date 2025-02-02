@@ -1,3 +1,6 @@
+Below is a complete HTML file you can drop onto your server as index.html. Replace “hero.mp4” with your video source and update the Pump.fun link when ready.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,4 +122,89 @@
       border-radius: 5px;
       text-align: left;
     }
-    .faq-
+    .faq-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ff0;
+    }
+    .faq-item p { font-size: 1.1rem; }
+    
+    /* Footer */
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  
+  <!-- Hero Section with Video Background -->
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="hero.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Buy $CLUSSY Now! Yes, It Honks.</h1>
+      <a href="https://pump.fun" class="cta-button" target="_blank">BUY $CLUSSY on Pump.fun</a>
+      <div class="quick-links">
+        <a href="https://t.me/CLUSSYCOIN" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://x.com/CLUSSYCOIN" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://discord.gg/gj3xpVC7" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://open.spotify.com/artist/69acRmaXz9MAvJRGx3dI35?si=tcWeW9iwSzuAoK508uH4Rw" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.youtube.com/channel/UC-idoqvGc_8oZrZJPUeBqbg" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about">
+    <h2>What is $CLUSSY?</h2>
+    <p>The memecoin powered by clown pussy and bad memes. Stake your life savings and join the circus. $CLUSSY - Yes, it honks. 🎪🤡</p>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is $CLUSSY?</h3>
+      <p>A pumpfun coin with clown pussy energy. Enough said.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I buy $CLUSSY?</h3>
+      <p>Click 'BUY $CLUSSY' above and honk away.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this a joke?</h3>
+      <p>Yes, but also no. Buy it and find out.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What does 'Yes, it honks' mean?</h3>
+      <p>iykyk</p>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>Powered by clown pussy and bad memes. Yes, it honks. 🎪🤡</p>
+  </footer>
+  
+  <!-- Smooth Scrolling Script -->
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
+```
