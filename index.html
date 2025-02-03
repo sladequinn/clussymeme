@@ -184,9 +184,7 @@
       margin-top: 20px;
       transition: transform 0.3s ease;
     }
-    #tokenomics h3:hover {
-      transform: translateY(-3px);
-    }
+    #tokenomics h3:hover { transform: translateY(-3px); }
     #tokenomics ul, #tokenomics ol {
       text-align: left;
       margin: 0 auto;
@@ -206,6 +204,14 @@
       width: 100%;
       height: 300px;
       border: none;
+    }
+    /* Fallback placeholder in case the ticker fails */
+    .ticker-placeholder {
+      border: 1px dashed #ec407a;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #ec407a;
     }
     
     /* Footer */
@@ -303,15 +309,16 @@
       <ol>
         <li>Launch on Pump.fun with bonding curve mechanics</li>
         <li>Migrate bonded tokens to Raydium</li>
-        <li>Introduce a merch store (a percentage of profits will be reinvested into $CLUSSY while you retain a share for sustaining your hard work)</li>
+        <li>Introduce a merch store (a percentage of profits will be reinvested into $CLUSSY)</li>
         <li>Pay clowngirl content creators in $CLUSSY</li>
         <li>Develop a clowngirl content platform with $CLUSSY tipping</li>
       </ol>
     </div>
-    <!-- Price Ticker using Moralis Widget -->
+    <!-- Price Ticker using Moralis Price Chart widget -->
     <div class="price-ticker">
-      <!-- Replace the address and chain parameters with your coin’s details when available -->
-      <iframe src="https://widgets.moralis.io/price-chart/?address=GJAFwWjJ3vnTsrQVabjBVK2TYB1YtRCQXRDfDgUnpump&chain=eth" loading="lazy"></iframe>
+      <iframe src="https://widgets.moralis.io/price-chart?address=GJAFwWjJ3vnTsrQVabjBVK2TYB1YtRCQXRDfDgUnpump&chain=eth" loading="lazy"></iframe>
+      <!-- If the widget fails to load due to restrictions, uncomment the following placeholder: -->
+      <!-- <div class="ticker-placeholder">Price ticker coming soon...</div> -->
     </div>
   </section>
   
