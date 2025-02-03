@@ -65,7 +65,7 @@
       z-index: -1;
       transform: translate(-50%, -50%);
     }
-    /* No overlay—clean video view */
+    /* No overlay – clean video view */
     .hero .content {
       position: relative;
       z-index: 1;
@@ -78,6 +78,8 @@
       font-family: 'Carnevalee Freakshow', cursive;
       font-size: 4rem;
       color: #e91e63;
+      /* Add text outline using a stroke and extra shadow for lift */
+      -webkit-text-stroke: 1px black;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
       margin-bottom: 20px;
     }
@@ -98,6 +100,9 @@
     }
     .quick-links {
       margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .quick-links a {
       color: #fff;
@@ -109,9 +114,6 @@
     .quick-links a:hover { 
       color: #e91e63;
       transform: scale(1.1);
-    }
-    .quick-links a i {
-      vertical-align: middle;
     }
     
     /* Section Styling */
@@ -170,7 +172,6 @@
       <source src="hero.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <!-- No overlay here -->
     <div class="content">
       <h1>$CLUSSY CRYPTOCURRENCY</h1>
       <a href="https://pump.fun" class="cta-button" target="_blank">BUY $CLUSSY on Pump.fun</a>
@@ -183,12 +184,7 @@
       </div>
     </div>
   </section>
-  
-  <!-- About Section -->
-  <section id="about">
-    <h2>What is $CLUSSY?</h2>
-    <p>The memecoin powered by clown pussy and bad memes. Stake your life savings and join the circus. $CLUSSY - Yes, it honks. 🎪🤡</p>
-  </section>
+
   
   <!-- FAQ Section -->
   <section id="faq">
@@ -199,7 +195,7 @@
     </div>
     <div class="faq-item">
       <h3>How do I buy $CLUSSY?</h3>
-      <p>Click 'BUY $CLUSSY' above</p>
+      <p>Click 'BUY $CLUSSY' above.</p>
     </div>
     <div class="faq-item">
       <h3>Is this a joke?</h3>
