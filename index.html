@@ -200,18 +200,9 @@
     .price-ticker {
       margin-top: 40px;
     }
-    .price-ticker iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-    }
-    /* Fallback placeholder in case the ticker fails */
-    .ticker-placeholder {
-      border: 1px dashed #ec407a;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.2rem;
-      color: #ec407a;
+    /* Live Coin Watch Ticker Widget */
+    .price-ticker div {
+      /* Adjust widget styling if needed */
     }
     
     /* Footer */
@@ -314,11 +305,20 @@
         <li>Develop a clowngirl content platform with $CLUSSY tipping</li>
       </ol>
     </div>
-    <!-- Price Ticker using Moralis Price Chart widget -->
+    <!-- Price Ticker using Live Coin Watch Widget -->
     <div class="price-ticker">
-      <iframe src="https://widgets.moralis.io/price-chart?address=GJAFwWjJ3vnTsrQVabjBVK2TYB1YtRCQXRDfDgUnpump&chain=eth" loading="lazy"></iframe>
-      <!-- If the widget fails to load due to restrictions, uncomment the following placeholder: -->
-      <!-- <div class="ticker-placeholder">Price ticker coming soon...</div> -->
+      <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
+      <div class="livecoinwatch-widget-3" 
+           lcw-coin="BTC" 
+           lcw-base="USD" 
+           lcw-d-head="true" 
+           lcw-d-name="true" 
+           lcw-d-code="true" 
+           lcw-d-icon="true" 
+           lcw-color-tx="#ffffff" 
+           lcw-color-bg="#1099cd" 
+           lcw-border-w="1">
+      </div>
     </div>
   </section>
   
