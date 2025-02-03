@@ -113,7 +113,7 @@
     }
     
     /* FAQ Section */
-    section {
+    section.faq-section {
       padding: 60px 20px;
       text-align: center;
       background: rgba(16,153,205, 0.2);
@@ -150,6 +150,24 @@
     }
     .faq-item p { font-size: 1.1rem; }
     
+    /* Spotify Section */
+    section.spotify-section {
+      padding: 40px 20px;
+      text-align: center;
+      background: rgba(16,153,205, 0.2);
+    }
+    section.spotify-section h2 {
+      font-family: 'Carnevalee Freakshow', cursive;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      color: #ec407a;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
+    .spotify-embed {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
     /* Footer */
     footer {
       background: rgba(16,153,205, 0.8);
@@ -166,6 +184,7 @@
       #faq h2 { font-size: 2rem; }
       .faq-item h3 { font-size: 1.5rem; }
       .faq-item p { font-size: 1rem; }
+      section.spotify-section h2 { font-size: 2rem; }
     }
   </style>
 </head>
@@ -195,7 +214,7 @@
   </section>
   
   <!-- FAQ Section -->
-  <section id="faq">
+  <section id="faq" class="faq-section">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <h3>What is $CLUSSY?</h3>
@@ -203,7 +222,7 @@
     </div>
     <div class="faq-item">
       <h3>How do I buy $CLUSSY?</h3>
-      <p>Just click 'BUY $CLUSSY' above.</p>
+      <p>jUST click 'BUY $CLUSSY' above.</p>
     </div>
     <div class="faq-item">
       <h3>Is this a joke?</h3>
@@ -212,6 +231,14 @@
     <div class="faq-item">
       <h3>What does 'Yes, it honks' mean?</h3>
       <p>iykyk</p>
+    </div>
+  </section>
+  
+  <!-- Spotify Section -->
+  <section class="spotify-section">
+    <h2>Featured Spotify Track</h2>
+    <div class="spotify-embed">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2fRCqFKbrND5rUN0rlDy42?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </section>
   
