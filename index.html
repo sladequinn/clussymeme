@@ -18,16 +18,16 @@
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Reset & Base */
+    /* Global resets and base styling */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { height: 100%; overflow-x: hidden; }
-    body { 
+    body {
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #138dbd, #1099cd);
       color: #fff;
     }
     
-    /* Navigation */
+    /* Navigation styling */
     nav {
       position: fixed;
       top: 0;
@@ -35,12 +35,12 @@
       background: rgba(16,153,205, 0.8);
       padding: 10px 20px;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
+      gap: 20px;
       z-index: 1000;
     }
     nav a {
       color: #fff;
-      margin-left: 20px;
       text-decoration: none;
       font-size: 1rem;
       transition: color 0.3s;
@@ -91,8 +91,8 @@
       transition: background 0.3s, transform 0.3s;
       font-family: 'Carnevalee Freakshow', cursive;
     }
-    .cta-button:hover { 
-      background: #d81b60; 
+    .cta-button:hover {
+      background: #d81b60;
       transform: scale(1.05);
     }
     .quick-links {
@@ -105,15 +105,15 @@
       color: #fff;
       font-size: 3.5rem;
       transition: color 0.3s, transform 0.3s;
-      margin: 0 40px; /* ensures uniform spacing */
+      margin: 0 40px;
     }
-    .quick-links a:hover { 
+    .quick-links a:hover {
       color: #ec407a;
       transform: scale(1.1);
     }
     
     /* FAQ Section */
-    section.faq-section {
+    .faq-section {
       padding: 60px 20px;
       text-align: center;
       background: rgba(16,153,205, 0.2);
@@ -126,9 +126,7 @@
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
       transition: transform 0.3s ease;
     }
-    #faq h2:hover {
-      transform: translateY(-3px);
-    }
+    #faq h2:hover { transform: translateY(-3px); }
     .faq-item {
       max-width: 800px;
       margin: 20px auto;
@@ -145,18 +143,16 @@
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
       transition: transform 0.3s ease;
     }
-    .faq-item h3:hover {
-      transform: translateY(-3px);
-    }
+    .faq-item h3:hover { transform: translateY(-3px); }
     .faq-item p { font-size: 1.1rem; }
     
     /* Spotify Section */
-    section.spotify-section {
+    .spotify-section {
       padding: 40px 20px;
       text-align: center;
       background: rgba(16,153,205, 0.2);
     }
-    section.spotify-section h2 {
+    .spotify-section h2 {
       font-family: 'Carnevalee Freakshow', cursive;
       font-size: 2.6rem;
       margin-bottom: 20px;
@@ -166,6 +162,45 @@
     .spotify-embed {
       max-width: 600px;
       margin: 0 auto;
+    }
+    
+    /* Tokenomics & Roadmap Section */
+    #tokenomics {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(16,153,205, 0.2);
+    }
+    #tokenomics h2 {
+      font-family: 'Carnevalee Freakshow', cursive;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #ec407a;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
+    #tokenomics h3 {
+      font-family: 'Carnevalee Freakshow', cursive;
+      font-size: 2rem;
+      color: #ec407a;
+      margin-top: 20px;
+    }
+    #tokenomics ul, #tokenomics ol {
+      text-align: left;
+      margin: 0 auto;
+      max-width: 800px;
+      font-size: 1.1rem;
+      list-style: inside;
+      padding: 10px 20px;
+    }
+    #tokenomics a {
+      color: #ec407a;
+      text-decoration: underline;
+    }
+    .price-ticker {
+      margin-top: 40px;
+      border: 1px dashed #ec407a;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2rem;
     }
     
     /* Footer */
@@ -184,17 +219,22 @@
       #faq h2 { font-size: 2rem; }
       .faq-item h3 { font-size: 1.5rem; }
       .faq-item p { font-size: 1rem; }
-      section.spotify-section h2 { font-size: 2rem; }
+      .spotify-section h2 { font-size: 2rem; }
+      #tokenomics h2 { font-size: 2rem; }
+      #tokenomics ul, #tokenomics ol { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
   <nav>
+    <a href="#hero">Home</a>
     <a href="#faq">FAQ</a>
+    <a href="#spotify">Spotify</a>
+    <a href="#tokenomics">Tokenomics</a>
   </nav>
   
   <!-- Hero Section -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <video autoplay muted loop>
       <source src="hero.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -204,7 +244,6 @@
       <a href="https://pump.fun" class="cta-button" target="_blank">BUY $CLUSSY on Pump.fun</a>
       <div class="quick-links">
         <a href="https://t.me/CLUSSYCOIN" target="_blank"><i class="fab fa-telegram"></i></a>
-        <!-- Replaced missing X/Twitter icon with the standard Twitter icon -->
         <a href="https://x.com/CLUSSYCOIN" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://discord.gg/gj3xpVC7" target="_blank"><i class="fab fa-discord"></i></a>
         <a href="https://open.spotify.com/artist/69acRmaXz9MAvJRGx3dI35?si=tcWeW9iwSzuAoK508uH4Rw" target="_blank"><i class="fab fa-spotify"></i></a>
@@ -222,7 +261,7 @@
     </div>
     <div class="faq-item">
       <h3>How do I buy $CLUSSY?</h3>
-      <p>jUST click 'BUY $CLUSSY' above.</p>
+      <p>Click 'BUY $CLUSSY' above and honk away.</p>
     </div>
     <div class="faq-item">
       <h3>Is this a joke?</h3>
@@ -235,10 +274,38 @@
   </section>
   
   <!-- Spotify Section -->
-  <section class="spotify-section">
+  <section id="spotify" class="spotify-section">
     <h2>Featured Spotify Track</h2>
     <div class="spotify-embed">
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2fRCqFKbrND5rUN0rlDy42?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </section>
+  
+  <!-- Tokenomics & Roadmap Section -->
+  <section id="tokenomics">
+    <h2>Tokenomics & Roadmap</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+      <h3>Tokenomics</h3>
+      <ul>
+        <li><strong>Total Supply:</strong> 1,000,000,000 $CLUSSY</li>
+        <li><strong>Circulation:</strong> 800,000,000 $CLUSSY</li>
+        <li><strong>Liquidity Reserve:</strong> 200,000,000 $CLUSSY</li>
+        <li><strong>Mechanics:</strong> Bonding curve model (from Pump.fun to Raydium)</li>
+        <li><a href="https://medium.com/@buildwithbhavya/the-math-behind-pump-fun-b58fdb30ed77" target="_blank">Read the Math Behind It</a></li>
+      </ul>
+      
+      <h3>Roadmap</h3>
+      <ol>
+        <li>Launch on Pump.fun with bonding curve mechanics</li>
+        <li>Migrate bonded tokens to Raydium</li>
+        <li>Introduce a merch store (profits reinvested into $CLUSSY)</li>
+        <li>Pay clowngirl content creators in $CLUSSY</li>
+        <li>Develop a clowngirl content platform with $CLUSSY tipping</li>
+      </ol>
+    </div>
+    <!-- Price Ticker Placeholder -->
+    <div class="price-ticker">
+      Price ticker coming soon...
     </div>
   </section>
   
