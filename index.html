@@ -65,7 +65,6 @@
       z-index: -1;
       transform: translate(-50%, -50%);
     }
-    /* Clean video view (no overlay) */
     .hero .content {
       position: relative;
       z-index: 1;
@@ -101,21 +100,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      /* Remove gap property and use explicit margins */
-      padding: 0 40px;
     }
     .quick-links a {
       color: #fff;
       font-size: 3.5rem;
       transition: color 0.3s, transform 0.3s;
-      margin: 0 40px; /* doubles spacing compared to before */
+      margin: 0 40px; /* ensures uniform spacing */
     }
     .quick-links a:hover { 
       color: #ec407a;
       transform: scale(1.1);
     }
     
-    /* Section Styling (FAQ only; About removed) */
+    /* FAQ Section */
     section {
       padding: 60px 20px;
       text-align: center;
@@ -177,7 +174,7 @@
     <a href="#faq">FAQ</a>
   </nav>
   
-  <!-- Hero Section with Video Background -->
+  <!-- Hero Section -->
   <section class="hero">
     <video autoplay muted loop>
       <source src="hero.mp4" type="video/mp4">
@@ -188,7 +185,8 @@
       <a href="https://pump.fun" class="cta-button" target="_blank">BUY $CLUSSY on Pump.fun</a>
       <div class="quick-links">
         <a href="https://t.me/CLUSSYCOIN" target="_blank"><i class="fab fa-telegram"></i></a>
-        <a href="https://x.com/CLUSSYCOIN" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <!-- Replaced missing X/Twitter icon with the standard Twitter icon -->
+        <a href="https://x.com/CLUSSYCOIN" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://discord.gg/gj3xpVC7" target="_blank"><i class="fab fa-discord"></i></a>
         <a href="https://open.spotify.com/artist/69acRmaXz9MAvJRGx3dI35?si=tcWeW9iwSzuAoK508uH4Rw" target="_blank"><i class="fab fa-spotify"></i></a>
         <a href="https://www.youtube.com/channel/UC-idoqvGc_8oZrZJPUeBqbg" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -205,7 +203,7 @@
     </div>
     <div class="faq-item">
       <h3>How do I buy $CLUSSY?</h3>
-      <p>Click 'BUY $CLUSSY' above and honk away.</p>
+      <p>Just click 'BUY $CLUSSY' above.</p>
     </div>
     <div class="faq-item">
       <h3>Is this a joke?</h3>
