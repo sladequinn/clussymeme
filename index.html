@@ -4,20 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$CLUSSY - Yes, It Honks</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* Reset & Base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html { font-family: Arial, sans-serif; height: 100%; overflow-x: hidden; }
-    body { background: #000; color: #fff; }
+    html, body { height: 100%; overflow-x: hidden; }
+    body { 
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #138dbd, #1099cd);
+      color: #fff;
+    }
     
     /* Navigation */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0,0,0,0.8);
+      background: rgba(16,153,205, 0.8);
       padding: 10px 20px;
       display: flex;
       justify-content: flex-end;
@@ -30,7 +36,7 @@
       font-size: 1rem;
       transition: color 0.3s;
     }
-    nav a:hover { color: #ff0; }
+    nav a:hover { color: #ffdd00; }
     
     /* Hero Section */
     .hero {
@@ -47,7 +53,7 @@
       min-height: 100%;
       width: auto;
       height: auto;
-      z-index: -1;
+      z-index: -2;
       transform: translate(-50%, -50%);
     }
     .hero .overlay {
@@ -56,53 +62,64 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(16,153,205, 0.3); /* subtle blue overlay */
+      z-index: -1;
     }
     .hero .content {
       position: relative;
       z-index: 1;
       text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 65%; /* moved lower */
+      transform: translateY(-65%);
       padding: 0 20px;
     }
     .hero h1 {
-      font-size: 3rem;
-      color: #ff0; /* Circus yellow */
+      font-family: 'Bangers', cursive;
+      font-size: 4rem;
+      color: #ffdd00;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
       margin-bottom: 20px;
     }
     .cta-button {
       display: inline-block;
-      background: #e60000; /* Bold circus red */
-      color: #fff;
+      background: #ffdd00;
+      color: #000;
       padding: 15px 30px;
       font-size: 1.2rem;
       text-decoration: none;
       border-radius: 5px;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
+      font-family: 'Bangers', cursive;
     }
-    .cta-button:hover { background: #cc0000; }
+    .cta-button:hover { 
+      background: #e6c200; 
+      transform: scale(1.05);
+    }
     .quick-links {
       margin-top: 30px;
     }
     .quick-links a {
       color: #fff;
-      margin: 0 10px;
-      font-size: 1.5rem;
-      transition: color 0.3s;
+      margin: 0 15px;
+      font-size: 2.5rem;
+      transition: color 0.3s, transform 0.3s;
     }
-    .quick-links a:hover { color: #ff0; }
+    .quick-links a:hover { 
+      color: #ffdd00;
+      transform: scale(1.1);
+    }
     
     /* Section Styling */
     section {
       padding: 60px 20px;
       text-align: center;
+      background: rgba(16,153,205, 0.2);
     }
     section h2 {
-      font-size: 2.5rem;
+      font-family: 'Bangers', cursive;
+      font-size: 2.8rem;
       margin-bottom: 20px;
-      color: #ff0;
+      color: #ffdd00;
     }
     section p {
       font-size: 1.2rem;
@@ -120,15 +137,16 @@
       text-align: left;
     }
     .faq-item h3 {
-      font-size: 1.5rem;
+      font-family: 'Bangers', cursive;
+      font-size: 1.8rem;
       margin-bottom: 10px;
-      color: #ff0;
+      color: #ffdd00;
     }
     .faq-item p { font-size: 1.1rem; }
     
     /* Footer */
     footer {
-      background: #000;
+      background: rgba(16,153,205, 0.8);
       padding: 20px;
       text-align: center;
       font-size: 1rem;
@@ -149,7 +167,7 @@
     </video>
     <div class="overlay"></div>
     <div class="content">
-      <h1>Buy $CLUSSY Now! Yes, It Honks.</h1>
+      <h1>$CLUSSY CRYPTOCURRENCY</h1>
       <a href="https://pump.fun" class="cta-button" target="_blank">BUY $CLUSSY on Pump.fun</a>
       <div class="quick-links">
         <a href="https://t.me/CLUSSYCOIN" target="_blank"><i class="fab fa-telegram"></i></a>
