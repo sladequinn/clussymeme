@@ -4,8 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$CLUSSY - Yes, It Honks</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Import custom font from the root directory -->
+  <style>
+    @font-face {
+      font-family: 'Carnevalee Freakshow';
+      src: url('Carnevalee Freakshow.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  <!-- Fallback Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -36,7 +45,7 @@
       font-size: 1rem;
       transition: color 0.3s;
     }
-    nav a:hover { color: #ffdd00; }
+    nav a:hover { color: #e91e63; }
     
     /* Hero Section */
     .hero {
@@ -53,46 +62,38 @@
       min-height: 100%;
       width: auto;
       height: auto;
-      z-index: -2;
+      z-index: -1;
       transform: translate(-50%, -50%);
     }
-    .hero .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(16,153,205, 0.3); /* subtle blue overlay */
-      z-index: -1;
-    }
+    /* No overlay—clean video view */
     .hero .content {
       position: relative;
       z-index: 1;
       text-align: center;
-      top: 65%; /* moved lower */
+      top: 65%; /* Moves the content lower */
       transform: translateY(-65%);
       padding: 0 20px;
     }
     .hero h1 {
-      font-family: 'Bangers', cursive;
+      font-family: 'Carnevalee Freakshow', cursive;
       font-size: 4rem;
-      color: #ffdd00;
+      color: #e91e63;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
       margin-bottom: 20px;
     }
     .cta-button {
       display: inline-block;
-      background: #ffdd00;
-      color: #000;
+      background: #e91e63;
+      color: #fff;
       padding: 15px 30px;
       font-size: 1.2rem;
       text-decoration: none;
       border-radius: 5px;
       transition: background 0.3s, transform 0.3s;
-      font-family: 'Bangers', cursive;
+      font-family: 'Carnevalee Freakshow', cursive;
     }
     .cta-button:hover { 
-      background: #e6c200; 
+      background: #d81b60; 
       transform: scale(1.05);
     }
     .quick-links {
@@ -100,13 +101,17 @@
     }
     .quick-links a {
       color: #fff;
-      margin: 0 15px;
-      font-size: 2.5rem;
+      margin: 0 20px;
+      font-size: 3.5rem;
       transition: color 0.3s, transform 0.3s;
+      display: inline-block;
     }
     .quick-links a:hover { 
-      color: #ffdd00;
+      color: #e91e63;
       transform: scale(1.1);
+    }
+    .quick-links a i {
+      vertical-align: middle;
     }
     
     /* Section Styling */
@@ -116,10 +121,10 @@
       background: rgba(16,153,205, 0.2);
     }
     section h2 {
-      font-family: 'Bangers', cursive;
+      font-family: 'Carnevalee Freakshow', cursive;
       font-size: 2.8rem;
       margin-bottom: 20px;
-      color: #ffdd00;
+      color: #e91e63;
     }
     section p {
       font-size: 1.2rem;
@@ -137,10 +142,10 @@
       text-align: left;
     }
     .faq-item h3 {
-      font-family: 'Bangers', cursive;
+      font-family: 'Carnevalee Freakshow', cursive;
       font-size: 1.8rem;
       margin-bottom: 10px;
-      color: #ffdd00;
+      color: #e91e63;
     }
     .faq-item p { font-size: 1.1rem; }
     
@@ -165,7 +170,7 @@
       <source src="hero.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="overlay"></div>
+    <!-- No overlay here -->
     <div class="content">
       <h1>$CLUSSY CRYPTOCURRENCY</h1>
       <a href="https://pump.fun" class="cta-button" target="_blank">BUY $CLUSSY on Pump.fun</a>
@@ -194,7 +199,7 @@
     </div>
     <div class="faq-item">
       <h3>How do I buy $CLUSSY?</h3>
-      <p>Click 'BUY $CLUSSY' above and honk away.</p>
+      <p>Click 'BUY $CLUSSY' above</p>
     </div>
     <div class="faq-item">
       <h3>Is this a joke?</h3>
