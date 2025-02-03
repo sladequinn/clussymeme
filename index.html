@@ -182,6 +182,10 @@
       font-size: 2rem;
       color: #ec407a;
       margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+    #tokenomics h3:hover {
+      transform: translateY(-3px);
     }
     #tokenomics ul, #tokenomics ol {
       text-align: left;
@@ -197,10 +201,11 @@
     }
     .price-ticker {
       margin-top: 40px;
-      border: 1px dashed #ec407a;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.2rem;
+    }
+    .price-ticker iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
     }
     
     /* Footer */
@@ -298,14 +303,14 @@
       <ol>
         <li>Launch on Pump.fun with bonding curve mechanics</li>
         <li>Migrate bonded tokens to Raydium</li>
-        <li>Introduce a merch store (profits reinvested into $CLUSSY)</li>
+        <li>Introduce a merch store (a percentage of profits will be reinvested into $CLUSSY while you retain a share for sustaining your hard work)</li>
         <li>Pay clowngirl content creators in $CLUSSY</li>
         <li>Develop a clowngirl content platform with $CLUSSY tipping</li>
       </ol>
     </div>
-    <!-- Price Ticker Placeholder -->
+    <!-- Price Ticker -->
     <div class="price-ticker">
-      Price ticker coming soon...
+      <iframe src="https://pump.fun/coin/GJAFwWjJ3vnTsrQVabjBVK2TYB1YtRCQXRDfDgUnpump?coin_sort=market_cap" loading="lazy"></iframe>
     </div>
   </section>
   
