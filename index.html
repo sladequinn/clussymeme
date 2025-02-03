@@ -45,7 +45,7 @@
       font-size: 1rem;
       transition: color 0.3s;
     }
-    nav a:hover { color: #e91e63; }
+    nav a:hover { color: #ec407a; }
     
     /* Hero Section */
     .hero {
@@ -65,25 +65,25 @@
       z-index: -1;
       transform: translate(-50%, -50%);
     }
-    /* No overlay – clean video view */
+    /* Clean video view (no overlay) */
     .hero .content {
       position: relative;
       z-index: 1;
       text-align: center;
-      top: 65%; /* Moves the content lower */
+      top: 65%;
       transform: translateY(-65%);
       padding: 0 20px;
     }
     .hero h1 {
       font-family: 'Carnevalee Freakshow', cursive;
       font-size: 4rem;
-      color: #e91e63;
+      color: #ec407a;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
       margin-bottom: 20px;
     }
     .cta-button {
       display: inline-block;
-      background: #e91e63;
+      background: #ec407a;
       color: #fff;
       padding: 15px 30px;
       font-size: 1.2rem;
@@ -101,37 +101,37 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px; /* ensures equal spacing between all icons */
+      /* Remove gap property and use explicit margins */
+      padding: 0 40px;
     }
     .quick-links a {
       color: #fff;
       font-size: 3.5rem;
       transition: color 0.3s, transform 0.3s;
+      margin: 0 40px; /* doubles spacing compared to before */
     }
     .quick-links a:hover { 
-      color: #e91e63;
+      color: #ec407a;
       transform: scale(1.1);
     }
     
-    /* Section Styling */
+    /* Section Styling (FAQ only; About removed) */
     section {
       padding: 60px 20px;
       text-align: center;
       background: rgba(16,153,205, 0.2);
     }
-    section h2 {
+    #faq h2 {
       font-family: 'Carnevalee Freakshow', cursive;
       font-size: 2.8rem;
       margin-bottom: 20px;
-      color: #e91e63;
+      color: #ec407a;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
     }
-    section p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 20px;
+    #faq h2:hover {
+      transform: translateY(-3px);
     }
-    
-    /* FAQ */
     .faq-item {
       max-width: 800px;
       margin: 20px auto;
@@ -144,8 +144,7 @@
       font-family: 'Carnevalee Freakshow', cursive;
       font-size: 1.8rem;
       margin-bottom: 10px;
-      color: #e91e63;
-      /* Lift effect: slight drop shadow and a hover translate */
+      color: #ec407a;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
       transition: transform 0.3s ease;
     }
@@ -160,6 +159,16 @@
       padding: 20px;
       text-align: center;
       font-size: 1rem;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.5rem; }
+      .cta-button { font-size: 1rem; padding: 10px 20px; }
+      .quick-links a { font-size: 2.5rem; margin: 0 20px; }
+      #faq h2 { font-size: 2rem; }
+      .faq-item h3 { font-size: 1.5rem; }
+      .faq-item p { font-size: 1rem; }
     }
   </style>
 </head>
@@ -187,7 +196,7 @@
     </div>
   </section>
   
-  <!-- FAQ Section (About section removed) -->
+  <!-- FAQ Section -->
   <section id="faq">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
