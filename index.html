@@ -201,11 +201,7 @@
       margin-top: 40px;
     }
     /* New Price Chart Widget Code: adjusted height */
-    #price-chart-widget-container {
-      width: 50%;
-      height: 500px;
-      margin: 0 auto;
-    }
+    /* (using 100% width/height as provided) */
     
     /* Footer */
     footer {
@@ -325,47 +321,46 @@
     </div>
     <!-- New Price Chart Widget Code -->
     <h2>Live Chart</h2>
-    <div class="price-ticker">
-      <div id="price-chart-widget-container" style="width: 50%; height:500px; margin: 0 auto;">
-        <script type="text/javascript">
-          (function() {
-            function loadWidget() {
-              if (typeof window.createMyWidget === 'function') {
-                window.createMyWidget('price-chart-widget-container', {
-                  autoSize: true,
-                  chain: 'sol',
-                  pairAddress: 'RYcxcu2YhD7UixQGpPFTYSnBu7v46ygFw2TjYNupump',
-                  defaultInterval: '1D',
-                  timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone ?? 'Etc/UTC',
-                  theme: 'moralis',
-                  locale: 'en',
-                  backgroundColor: '#071321',
-                  gridColor: '#0d2035',
-                  textColor: '#68738D',
-                  candleUpColor: '#4CE666',
-                  candleDownColor: '#E64C4C',
-                  hideLeftToolbar: false,
-                  hideTopToolbar: false,
-                  hideBottomToolbar: false
-                });
-              } else {
-                console.error('createMyWidget function is not defined.');
-              }
-            }
-            if (!document.getElementById('moralis-chart-widget')) {
-              var script = document.createElement('script');
-              script.id = 'moralis-chart-widget';
-              script.src = 'https://moralis.com/static/embed/chart.js';
-              script.type = 'text/javascript';
-              script.async = true;
-              script.onload = loadWidget;
-              document.body.appendChild(script);
+    <div id="price-chart-widget-container" style="width: 100%; height:100%">
+      <script type="text/javascript">
+        (function() {
+          function loadWidget() {
+            if (typeof window.createMyWidget === 'function') {
+              window.createMyWidget('price-chart-widget-container', {
+                autoSize: true,
+                chainId: 'solana',
+                tokenAddress: 'RYcxcu2YhD7UixQGpPFTYSnBu7v46ygFw2TjYNupump',
+                defaultInterval: '1D',
+                timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone ?? 'Etc/UTC',
+                theme: 'moralis',
+                locale: 'en',
+                backgroundColor: '#1099cd',
+                gridColor: '#00264a',
+                textColor: '#00264a',
+                candleUpColor: '#7efced',
+                candleDownColor: '#ff61f9',
+                hideLeftToolbar: false,
+                hideTopToolbar: true,
+                hideBottomToolbar: false
+              });
             } else {
-              loadWidget();
+              console.error('createMyWidget function is not defined.');
             }
-          })();
-        </script>
-      </div>
+          }
+
+          if (!document.getElementById('moralis-chart-widget')) {
+            var script = document.createElement('script');
+            script.id = 'moralis-chart-widget';
+            script.src = 'https://moralis.com/static/embed/chart.js';
+            script.type = 'text/javascript';
+            script.async = true;
+            script.onload = loadWidget;
+            document.body.appendChild(script);
+          } else {
+            loadWidget();
+          }
+        })();
+      </script>
     </div>
   </section>
   
