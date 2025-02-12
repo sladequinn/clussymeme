@@ -200,8 +200,12 @@
     .price-ticker {
       margin-top: 40px;
     }
-    /* New Price Chart Widget Code: adjusted height */
-    /* (using 100% width/height as provided) */
+    /* Price Chart Widget Container (desktop size) */
+    #price-chart-widget-container {
+      width: 50%;
+      height: 500px;
+      margin: 0 auto;
+    }
     
     /* Footer */
     footer {
@@ -261,11 +265,11 @@
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
       <h3>What is $CLUSSY?</h3>
-      <p>A pumpfun coin with clown pussy energy. Enough said.</p>
+      <p>A pumpfun coin with clown pussy energy.</p>
     </div>
     <div class="faq-item">
       <h3>How do I buy $CLUSSY?</h3>
-      <p>Click 'BUY $CLUSSY' above and honk away.</p>
+      <p>Just click 'BUY $CLUSSY' above.</p>
     </div>
     <div class="faq-item">
       <h3>Is this a joke?</h3>
@@ -273,7 +277,7 @@
     </div>
     <div class="faq-item">
       <h3>What does 'Yes, it honks' mean?</h3>
-      <p>iykyk</p>
+      <p>If you know, you know.</p>
     </div>
   </section>
   
@@ -321,7 +325,7 @@
     </div>
     <!-- New Price Chart Widget Code -->
     <h2>Live Chart</h2>
-    <div id="price-chart-widget-container" style="width: 100%; height:100%">
+    <div id="price-chart-widget-container" style="width: 50%; height: 500px; margin: 0 auto;">
       <script type="text/javascript">
         (function() {
           function loadWidget() {
@@ -347,7 +351,6 @@
               console.error('createMyWidget function is not defined.');
             }
           }
-
           if (!document.getElementById('moralis-chart-widget')) {
             var script = document.createElement('script');
             script.id = 'moralis-chart-widget';
